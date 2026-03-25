@@ -8,6 +8,7 @@ var pi = 3.14159;
 var moveinterval = 2;
 var maxrandom = 5;
 var host = data["ip"];
+var port = parseInt(data["port"]) || 25565;
 var username = data["name"]
 
 function createBot() {
@@ -18,6 +19,7 @@ function createBot() {
 
     var bot = mineflayer.createBot({
         host: host,
+        port: port,
         username: username
     });
 
